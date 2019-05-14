@@ -110,7 +110,7 @@ a:active, a:hover { color: #999999; text-decoration: underline;}
 }
 
 form{
-	margin: 0;
+	margin: 10;
 	padding: 0;
 	text-align: right;	
 }
@@ -127,6 +127,7 @@ input{
 	color: #99836c;
 	border: 1px solid #99836c;
 	background: #400a0a;
+	
 }
 select{
 	color: #99836c;

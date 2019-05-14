@@ -1,8 +1,42 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Σχετικά Με Εμάς</title>
+<title>Κατάστημα</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.buttonlogin {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.buttonregister {
+  background-color: #FFA500;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 98%;
+  margin: auto;
+}
+</style>
 </head>
 <body>
 <div id="style_container">
@@ -25,16 +59,21 @@
 
     <div id="style_content">  
 	
-    	<div id="style_left_column">
-            <h2>Σύνδεση Χρήστη</h2>
-            <div class="left_col_box">
-                <form method="get" action="#">
-                  <div class="form_row"><label>Όνομα</label><input class="inputfield" name="username" type="text" id="username"/></div>
-                    <div class="form_row"><label>Κωδικός</label><input class="inputfield" name="password" type="password" id="password"/></div>
-                    <input class="button" type="submit" name="Submit" value="Σύνδεση" />
-                </form>
-			</div>
-			
+            <h1 align="center">Σύνδεση Χρήστη</h1>
+				<form action="/action_page.php">
+
+				  <div class="container">
+					<label for="uname"><b>E-mail</b></label>
+					<input type="text" placeholder="Πληκτρολόγησε το E-mail σου" name="uname" required>
+
+					<label for="psw"><b>Κωδικός</b></label>
+					<input type="password" placeholder="Πληκτρολόγησε τον κωδικό σου" name="psw" required>
+						
+					<button type="submit" class="buttonlogin">Σύνδεση</button>
+				  </div>
+				</form>			
+			<a href="register.html"><button type="submit" class="buttonregister">Εγγραφή</button></a>
+			<br>
             	<h1 align="center">Κατάστημα</h1>
             	<div class="new_released_box">
                 <img src="images/album1.jpg" alt="image" />
@@ -75,7 +114,6 @@
                     </div>
                     <div class="more_button"><a href="store.html">Περισσότερα</a></div>
 				</div> 
-            </div> 
 	</div>			
 	<div id="style_footer">
         <a href="index.html">Κύρια Σελίδα</a> | <a href="aboutus.html">Σχετικά Με Εμάς</a> | <a href="store.html">Ηλ. Κατάστημα</a> | <a href="live.html">Όλα Τα Live</a> | <a href="news.html">Τα Νέα Μας</a> | <a href="contact.html">Επικοινωνία</a><br />
