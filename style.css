@@ -83,7 +83,7 @@ a:active, a:hover { color: #999999; text-decoration: underline;}
 	clear: both;
 	text-align: center;
 	display: block;
-	width: 100px;
+	width: 120px;
 	padding: 1px 0;
 	margin-bottom: 5px; 
 	background: #6c5b4c;
@@ -333,11 +333,17 @@ select{
 .new_released_box {
 	float: left;
 	width: 180px;
-	margin: 0 10px 0 15px;	
+	margin: 0 10px 15px;	
+	width: auto;
+	height: auto;
+	
+	
+
 }
 
 .new_released_box img{
 	margin-bottom: 5px;
+	
 }
 
 #news_section {
