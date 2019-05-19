@@ -4,8 +4,8 @@
 <title>Εγγραφή Χρήστη</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="images/favicon.ico">
-<style>
-/* Μεγάλα πεδία εισαγωγής τιμών */
+<style>
+/* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -13,13 +13,12 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: none;
   background: #f1f1f1;
-}
-
+}
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
-}
-
+}
+/* Set a style for the submit/register button */
 .registerbutton {
   background-color: #FFA500;
   color: white;
@@ -47,27 +46,46 @@ input[type=text]:focus, input[type=password]:focus {
             <li><a href="news.html">Τα Νέα Μας</a></li>                      
             <li><a href="contact.html">Επικοινωνία</a></li>        
         </ul>  
-    </div>
+    </div>
+
     <div id="style_content">        
             	<h1 align="center">Εγγραφή Χρήστη</h1>
-				    <h3 align="center">Καταχωρήστε τα στοιχεία σας</h3>
-					<form action="register.php" method="post">
-					  <div class="container">
-						<label for="username"><b>Όνομα Χρήστη</b></label>
-						<input type="text" placeholder="Πληκτρολόγησε το ψευδώνυμο σου" name="username" required>
-						<label for="email"><b>Email</b></label>
-						<input type="text" placeholder="Πληκτρολόγησε το e-mail σου" name="email" required>
-						<label for="password_1"><b>Κωδικός</b></label>
-						<input type="password" placeholder="Πληκτρολόγησε τον κωδικό σου" name="password_1" required>
-						<label for="password_2"><b>Επανέλαβε Κωδικό</b></label>
-						<input type="password" placeholder="Επανέλαβε των κωδικό σου" name="password_2" required>
-						<hr>
-
-						<button type="submit" class="registerbutton">Εγγραφή</button>
-					  </div>
-					</form>
+					<?php
+                     $username = filter_input(INPUT_POST, 'username');
+                     $email = filter_input(INPUT_POST, 'email');
+                     $password_1 = filter_input(INPUT_POST, 'password_1');
+                     $password_2 = filter_input(INPUT_POST, 'password_2');
+                     if ($password_1 == $password_2) { 			 
+						$servername = "localhost";
+						$user = "id9543333_queenmusicstore";
+						$pass = "123456";
+						$database = "id9543333_queenstore";
+						
+						$conn = mysqli_connect($servername, $user, $pass, $database);
+						
+						if (!$conn) {
+							die("Connection failed: " . mysqli_connect_error());
+						}                  
+						else{
+						$sql = "INSERT INTO users (username, email, password)
+						values ('$username','$email','$password_1')";
+						if ($conn->query($sql)){
+						echo "<p align=center>Η εγγραφή ήταν επιτυχής!</p>";
+						}
+						else{
+						echo "Error: ". $sql ."
+						". $conn->error;
+						}
+						$conn->close();
+						}
+						}
+						else{
+						echo "<p align=center>Οι κωδικοί δεν ταιριάζουν</p>";
+						}
+                    ?>
+                    <div class="addtocart_button" align='center'><a href="loginpage.php">Επιστροφή</a></div>
 				<br>
-            </div>  			  
+            </div>  			
 	<div id="style_footer">
         <a href="index.html">Κύρια Σελίδα</a> | <a href="aboutus.html">Σχετικά Με Εμάς</a> | <a href="loginpage.php">Ηλ. Κατάστημα</a> | <a href="live.html">Όλα Τα Live</a> | <a href="news.html">Τα Νέα Μας</a> | <a href="contact.html">Επικοινωνία</a><br />
         Copyright © <a href="index.html"><strong>Queen 2019</strong></a> 

@@ -6,13 +6,12 @@
 <style>
 * {box-sizing: border-box}
 
-/* Slideshow container */
+/* Τοποθεσία Διαφανειών */
 .slideshow-container {
   position: relative;           
   left: 1%;
-}
-
-/* Next & previous buttons */
+}
+/* Επόμενο και προηγούμενο πλήκτρο */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -28,18 +27,16 @@
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Θέση του δεξιού πλήκτρου "επόμενο" */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
+}
+/* Όταν πηγαίνει το ποντίκι επάνω, πρόσθεσε μάυρο φόντο */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
+}
+/* Ο τίτλος κάθε φωτογραφίας */
 .textslideshow {
   color: #f2f2f2;
   font-size: 15px;
@@ -50,15 +47,15 @@
   text-align: center;
 }
 
-/* Fading animation */
+/* Η κίνηση που αλλάζουν ομαλά οι εικόνες */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
+@-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
@@ -82,13 +79,12 @@
      	<ul>
 			<li><a href="index.html">Κύρια Σελίδα</a></li>
 			<li><a href="aboutus.html">Σχετικά Με Εμάς</a></li>
-            <li><a href="store.html">Ηλ. Κατάστημα</a></li>
+            <li><a href="loginpage.php">Ηλ. Κατάστημα</a></li>
             <li><a href="live.html" class="current">Όλα Τα Live</a></li>
             <li><a href="news.html">Τα Νέα Μας</a></li>                      
             <li><a href="contact.html">Επικοινωνία</a></li>        
         </ul>  
-    </div>
-    
+    </div>  
     <div id="style_content">        
             	<h1 align="center">Προσεχώς Live</h1>
                 <div class="center_text">				
@@ -128,43 +124,35 @@
 			  </div>  
 			  </div> 			  
             	<h1 align="center">Παλαιότερα Live</h1>
-<div class="slideshow-container">
-
+<div class="slideshow-container">
 <div class="mySlides fade">
   <img src="images/Lives/2017.jpg" style="width:100%">
   <div class="textslideshow">2017 Queen + Adam Lambert North American Tour</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/2016.jpg" style="width:100%">
   <div class="textslideshow">2016 Queen + Adam Lambert - European Summer Festival Tour</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/2015.jpg" style="width:100%">
   <div class="textslideshow">2015 Queen + Adam Lambert UK and European Tour</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/2014.jpg" style="width:100%">
   <div class="textslideshow">2014 Queen + Adam Lambert</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1986.jpg" style="width:100%">
   <div class="textslideshow">1986 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1985.jpg" style="width:100%">
   <div class="textslideshow">1985 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1984.jpg" style="width:100%">
   <div class="textslideshow">1984 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1981.jpg" style="width:100%">
   <div class="textslideshow">1981 Queen</div>
@@ -173,43 +161,34 @@
 <div class="mySlides fade">
   <img src="images/Lives/1980.jpg" style="width:100%">
   <div class="textslideshow">1980 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1978.jpg" style="width:100%">
   <div class="textslideshow">1978 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1976.jpg" style="width:100%">
   <div class="textslideshow">1976 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1975.jpg" style="width:100%">
   <div class="textslideshow">1975 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1974.jpg" style="width:100%">
   <div class="textslideshow">1974 Queen</div>
-</div>
-
+</div>
 <div class="mySlides fade">
   <img src="images/Lives/1972.jpg" style="width:100%">
   <div class="textslideshow">1972 Queen</div>
 </div>
-
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
 </div>
-<br>
-
+<br>
 <script>
 var slideIndex = 1;
-showSlides(slideIndex);
-
+showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -230,9 +209,9 @@ function showSlides(n) {
 }
 </script>
 <br>	
-    </div> 		
+    </div> 
 	<div id="style_footer">
-        <a href="index.html">Κύρια Σελίδα</a> | <a href="aboutus.html">Σχετικά Με Εμάς</a> | <a href="store.html">Ηλ. Κατάστημα</a> | <a href="live.html">Όλα Τα Live</a> | <a href="news.html">Τα Νέα Μας</a> | <a href="contact.html">Επικοινωνία</a><br />
+        <a href="index.html">Κύρια Σελίδα</a> | <a href="aboutus.html">Σχετικά Με Εμάς</a> | <a href="loginpage.php">Ηλ. Κατάστημα</a> | <a href="live.html">Όλα Τα Live</a> | <a href="news.html">Τα Νέα Μας</a> | <a href="contact.html">Επικοινωνία</a><br />
         Copyright © <a href="index.html"><strong>Queen 2019</strong></a>
 	</div>	
 </div>
